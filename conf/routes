@@ -5,6 +5,7 @@
 # GETy
 GET     /                           @controllers.Application.index
 GET     /products                   @controllers.ProductController.allproducts
+GET     /products/:prodId           @controllers.ProductController.getproduct(prodId : Long)
 
 # POSTy
 POST    /products/new               @controllers.ProductController.newproduct

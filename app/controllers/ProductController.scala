@@ -16,10 +16,17 @@ class ProductController @Inject()(productsDAO: ProductsDAO) extends Controller {
     }
   }
 
+  def getproduct(prodId: Long) = Action.async { implicit request =>
+    productsDAO.getById(prodId) map {
+      product => Ok(Json.toJson(product))
+    }
+  }
+
   def newproduct = Action { implicit request =>
     var json:ProductsREST = request.body.asJson.get.as[ProductsREST]
-    var product = Products(prodId = 0, tytul = json.tytul, opis = json.opis)
+    var product = Products(prodId = 0, tytul = json.tytul, opis = json.opis, imgUrl = json.imgUrl, cena = json.cena, kategoriaId = json.kategoriaId)
     productsDAO.insert(product)
     Ok(request.body.asJson.get)
   }
+
 }
