@@ -22,11 +22,30 @@ class ProductController @Inject()(productsDAO: ProductsDAO) extends Controller {
     }
   }
 
+  def getbycategory(catId: Long) = Action.async { implicit request =>
+    productsDAO.getByCategory(catId) map {
+      products => Ok(Json.toJson(products))
+    }
+  }
+
   def newproduct = Action { implicit request =>
     var json:ProductsREST = request.body.asJson.get.as[ProductsREST]
     var product = Products(prodId = 0, tytul = json.tytul, opis = json.opis, imgUrl = json.imgUrl, cena = json.cena, kategoriaId = json.kategoriaId)
     productsDAO.insert(product)
     Ok(request.body.asJson.get)
+  }
+
+  def updateproduct(prodId: Long) = Action { implicit request =>
+    var json:ProductsREST = request.body.asJson.get.as[ProductsREST]
+    var product = Products(prodId = json.prodId, tytul = json.tytul, opis = json.opis, imgUrl = json.imgUrl, cena = json.cena, kategoriaId = json.kategoriaId)
+    productsDAO.update(prodId, product)
+    Ok(request.body.asJson.get)
+  }
+
+  def deleteproduct(prodId: Long) = Action.async { implicit request =>
+    productsDAO.delete(prodId) map {
+      result => Ok("ok")
+    }
   }
 
 }

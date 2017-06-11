@@ -38,10 +38,26 @@ class ProductsDAO @Inject()(protected val dbConfigProvider: DatabaseConfigProvid
     )
   }
 
+  def getByCategory(catId: Long): Future[List[ProductsREST]] = {
+    val products = db.run(Products.filter(_.kategoriaId === catId).result)
+    products.map(
+      _.map {
+        a => ProductsREST(prodId = a.prodId, tytul = a.tytul, opis = a.opis, imgUrl = a.imgUrl, cena = a.cena, kategoriaId = a.kategoriaId)
+      }.toList)
+  }
+
   def insert(product: Products): Future[Unit] = {
     db.run(Products += product).map { _ => () }
   }
 
+  def update(prodId: Long, product: Products): Future[Unit] = {
+    val toUpdate: Products = product.copy(prodId)
+    db.run(Products.filter(_.prodId === prodId).update(toUpdate)).map(_ => ())
+  }
+
+  def delete(prodId: Long): Future[Unit] = {
+    db.run(Products.filter(_.prodId === prodId).delete).map(_ => () )
+  }
 
   class ProductsTable(tag: Tag) extends Table[Products](tag, "Products") {
     def prodId = column[Long]("prodId",O.AutoInc, O.AutoInc)

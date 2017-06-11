@@ -2,13 +2,18 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-# GETy
+# GET
 GET     /                           @controllers.Application.index
 GET     /products                   @controllers.ProductController.allproducts
 GET     /products/:prodId           @controllers.ProductController.getproduct(prodId : Long)
+GET     /products/category/:catId   @controllers.ProductController.getbycategory(catId: Long)
 
-# POSTy
+# POST
 POST    /products/new               @controllers.ProductController.newproduct
+POST    /products/:prodId           @controllers.ProductController.updateproduct(prodId : Long)
+
+# DELETE
+DELETE  /products/:prodId           @controllers.ProductController.deleteproduct(prodId : Long)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
