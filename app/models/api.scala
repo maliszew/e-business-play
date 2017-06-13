@@ -13,8 +13,3 @@ object ProductsREST {
   implicit val productsFormat = Json.format[ProductsREST]
 }
 
-/* case class NewProductsREST(tytul: String, opis: String, imgUrl: String, cena: BigDecimal, kategoriaId: Long)
-
-object NewProductsREST {
-  implicit val productFormat = Json.format[NewProductsREST]
-} */
