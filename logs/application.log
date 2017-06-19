@@ -1,528 +1,145 @@
-2017-06-11 21:12:18,834 [INFO] from play.core.server.NettyServer in pool-4-thread-5 - Listening for HTTP on /0:0:0:0:0:0:0:0:9000
-2017-06-11 21:12:22,434 [WARN] from application in ForkJoinPool-1-worker-1 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
-2017-06-11 21:12:28,830 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
-2017-06-12 16:56:19,868 [ERROR] from application in application-akka.actor.default-dispatcher-36 - 
-
-! @74an8bcgb - Internal server error, for (POST) [/products/new] ->
- 
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[JsResultException: JsResultException(errors:List((/imgUrl,List(ValidationError(List(error.path.missing),WrappedArray()))), (/cena,List(ValidationError(List(error.path.missing),WrappedArray()))), (/kategoriaId,List(ValidationError(List(error.path.missing),WrappedArray()))), (/prodId,List(ValidationError(List(error.path.missing),WrappedArray())))))]]
-	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:265) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:191) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:179) [play_2.11-2.4.9.jar:2.4.9]
-	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:212) [play_2.11-2.4.9.jar:2.4.9]
-	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:94) [play_2.11-2.4.9.jar:2.4.9]
-	at play.filters.cors.AbstractCORSPolicy$$anonfun$1.applyOrElse(AbstractCORSPolicy.scala:145) [filters-helpers_2.11-2.4.9.jar:2.4.9]
-	at play.filters.cors.AbstractCORSPolicy$$anonfun$1.applyOrElse(AbstractCORSPolicy.scala:144) [filters-helpers_2.11-2.4.9.jar:2.4.9]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.7.jar:na]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70) [play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.Promise$class.tryFailure(Promise.scala:112) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryFailure(Promise.scala:153) [scala-library-2.11.7.jar:na]
-	at play.api.mvc.Filter$$anon$1$$anonfun$apply$4$$anonfun$apply$1.applyOrElse(Filters.scala:67) [play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Filter$$anon$1$$anonfun$apply$4$$anonfun$apply$1.applyOrElse(Filters.scala:61) [play_2.11-2.4.9.jar:2.4.9]
-	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36) [scala-library-2.11.7.jar:na]
-	at play.api.libs.iteratee.Iteratee$$anonfun$recoverM$1.applyOrElse(Iteratee.scala:629) [play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$recoverM$1.applyOrElse(Iteratee.scala:629) [play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36) [scala-library-2.11.7.jar:na]
-	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:216) [scala-library-2.11.7.jar:na]
-	at scala.util.Try$.apply(Try.scala:192) [scala-library-2.11.7.jar:na]
-	at scala.util.Failure.recover(Try.scala:216) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.7.jar:na]
-	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55) [akka-actor_2.11-2.3.13.jar:na]
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91) [akka-actor_2.11-2.3.13.jar:na]
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91) [akka-actor_2.11-2.3.13.jar:na]
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91) [akka-actor_2.11-2.3.13.jar:na]
-	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72) [scala-library-2.11.7.jar:na]
-	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90) [akka-actor_2.11-2.3.13.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40) [akka-actor_2.11-2.3.13.jar:na]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:397) [akka-actor_2.11-2.3.13.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.7.jar:na]
-Caused by: play.api.libs.json.JsResultException: JsResultException(errors:List((/imgUrl,List(ValidationError(List(error.path.missing),WrappedArray()))), (/cena,List(ValidationError(List(error.path.missing),WrappedArray()))), (/kategoriaId,List(ValidationError(List(error.path.missing),WrappedArray()))), (/prodId,List(ValidationError(List(error.path.missing),WrappedArray())))))
-	at play.api.libs.json.JsReadable$$anonfun$2.apply(JsReadable.scala:20) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.json.JsReadable$$anonfun$2.apply(JsReadable.scala:20) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.json.JsResult$class.fold(JsResult.scala:73) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.json.JsError.fold(JsResult.scala:13) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.json.JsReadable$class.as(JsReadable.scala:18) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.json.JsObject.as(JsValue.scala:76) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at controllers.ProductController$$anonfun$newproduct$1.apply(ProductController.scala:32) ~[classes/:na]
-	at controllers.ProductController$$anonfun$newproduct$1.apply(ProductController.scala:31) ~[classes/:na]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$16.apply(Action.scala:408) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$16.apply(Action.scala:407) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$.invokeBlock(Action.scala:533) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$.invokeBlock(Action.scala:530) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:493) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:105) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:105) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:104) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:103) ~[play_2.11-2.4.9.jar:2.4.9]
-	at scala.Option.map(Option.scala:146) ~[scala-library-2.11.7.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:103) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:96) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:524) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:524) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:560) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:560) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:537) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:537) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.7.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.7.jar:na]
-	... 6 common frames omitted
-2017-06-12 16:57:00,265 [ERROR] from application in application-akka.actor.default-dispatcher-36 - 
-
-! @74an8dkbg - Internal server error, for (POST) [/products/new] ->
- 
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[JsResultException: JsResultException(errors:List((/imgUrl,List(ValidationError(List(error.path.missing),WrappedArray()))), (/cena,List(ValidationError(List(error.path.missing),WrappedArray()))), (/kategoriaId,List(ValidationError(List(error.path.missing),WrappedArray()))), (/prodId,List(ValidationError(List(error.path.missing),WrappedArray())))))]]
-	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:265) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:191) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:179) [play_2.11-2.4.9.jar:2.4.9]
-	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:212) [play_2.11-2.4.9.jar:2.4.9]
-	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:94) [play_2.11-2.4.9.jar:2.4.9]
-	at play.filters.cors.AbstractCORSPolicy$$anonfun$1.applyOrElse(AbstractCORSPolicy.scala:145) [filters-helpers_2.11-2.4.9.jar:2.4.9]
-	at play.filters.cors.AbstractCORSPolicy$$anonfun$1.applyOrElse(AbstractCORSPolicy.scala:144) [filters-helpers_2.11-2.4.9.jar:2.4.9]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.7.jar:na]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70) [play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.Promise$class.tryFailure(Promise.scala:112) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryFailure(Promise.scala:153) [scala-library-2.11.7.jar:na]
-	at play.api.mvc.Filter$$anon$1$$anonfun$apply$4$$anonfun$apply$1.applyOrElse(Filters.scala:67) [play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Filter$$anon$1$$anonfun$apply$4$$anonfun$apply$1.applyOrElse(Filters.scala:61) [play_2.11-2.4.9.jar:2.4.9]
-	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36) [scala-library-2.11.7.jar:na]
-	at play.api.libs.iteratee.Iteratee$$anonfun$recoverM$1.applyOrElse(Iteratee.scala:629) [play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$recoverM$1.applyOrElse(Iteratee.scala:629) [play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36) [scala-library-2.11.7.jar:na]
-	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:216) [scala-library-2.11.7.jar:na]
-	at scala.util.Try$.apply(Try.scala:192) [scala-library-2.11.7.jar:na]
-	at scala.util.Failure.recover(Try.scala:216) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.7.jar:na]
-	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55) [akka-actor_2.11-2.3.13.jar:na]
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91) [akka-actor_2.11-2.3.13.jar:na]
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91) [akka-actor_2.11-2.3.13.jar:na]
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91) [akka-actor_2.11-2.3.13.jar:na]
-	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72) [scala-library-2.11.7.jar:na]
-	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90) [akka-actor_2.11-2.3.13.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40) [akka-actor_2.11-2.3.13.jar:na]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:397) [akka-actor_2.11-2.3.13.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.7.jar:na]
-Caused by: play.api.libs.json.JsResultException: JsResultException(errors:List((/imgUrl,List(ValidationError(List(error.path.missing),WrappedArray()))), (/cena,List(ValidationError(List(error.path.missing),WrappedArray()))), (/kategoriaId,List(ValidationError(List(error.path.missing),WrappedArray()))), (/prodId,List(ValidationError(List(error.path.missing),WrappedArray())))))
-	at play.api.libs.json.JsReadable$$anonfun$2.apply(JsReadable.scala:20) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.json.JsReadable$$anonfun$2.apply(JsReadable.scala:20) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.json.JsResult$class.fold(JsResult.scala:73) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.json.JsError.fold(JsResult.scala:13) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.json.JsReadable$class.as(JsReadable.scala:18) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.json.JsObject.as(JsValue.scala:76) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at controllers.ProductController$$anonfun$newproduct$1.apply(ProductController.scala:32) ~[classes/:na]
-	at controllers.ProductController$$anonfun$newproduct$1.apply(ProductController.scala:31) ~[classes/:na]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$16.apply(Action.scala:408) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$16.apply(Action.scala:407) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$.invokeBlock(Action.scala:533) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$.invokeBlock(Action.scala:530) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:493) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:105) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:105) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:104) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:103) ~[play_2.11-2.4.9.jar:2.4.9]
-	at scala.Option.map(Option.scala:146) ~[scala-library-2.11.7.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:103) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:96) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:524) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:524) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:560) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:560) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:537) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:537) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.7.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.7.jar:na]
-	... 6 common frames omitted
-2017-06-12 19:13:49,910 [ERROR] from application in application-akka.actor.default-dispatcher-108 - 
-
-! @74ao0cmkk - Internal server error, for (POST) [/products/new] ->
- 
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[JsResultException: JsResultException(errors:List((/imgUrl,List(ValidationError(List(error.path.missing),WrappedArray()))), (/cena,List(ValidationError(List(error.path.missing),WrappedArray()))), (/kategoriaId,List(ValidationError(List(error.path.missing),WrappedArray()))), (/prodId,List(ValidationError(List(error.path.missing),WrappedArray())))))]]
-	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:265) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:191) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:179) [play_2.11-2.4.9.jar:2.4.9]
-	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:212) [play_2.11-2.4.9.jar:2.4.9]
-	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:94) [play_2.11-2.4.9.jar:2.4.9]
-	at play.filters.cors.AbstractCORSPolicy$$anonfun$1.applyOrElse(AbstractCORSPolicy.scala:145) [filters-helpers_2.11-2.4.9.jar:2.4.9]
-	at play.filters.cors.AbstractCORSPolicy$$anonfun$1.applyOrElse(AbstractCORSPolicy.scala:144) [filters-helpers_2.11-2.4.9.jar:2.4.9]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.7.jar:na]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70) [play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.Promise$class.tryFailure(Promise.scala:112) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryFailure(Promise.scala:153) [scala-library-2.11.7.jar:na]
-	at play.api.mvc.Filter$$anon$1$$anonfun$apply$4$$anonfun$apply$1.applyOrElse(Filters.scala:67) [play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Filter$$anon$1$$anonfun$apply$4$$anonfun$apply$1.applyOrElse(Filters.scala:61) [play_2.11-2.4.9.jar:2.4.9]
-	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36) [scala-library-2.11.7.jar:na]
-	at play.api.libs.iteratee.Iteratee$$anonfun$recoverM$1.applyOrElse(Iteratee.scala:629) [play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$recoverM$1.applyOrElse(Iteratee.scala:629) [play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36) [scala-library-2.11.7.jar:na]
-	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:216) [scala-library-2.11.7.jar:na]
-	at scala.util.Try$.apply(Try.scala:192) [scala-library-2.11.7.jar:na]
-	at scala.util.Failure.recover(Try.scala:216) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.7.jar:na]
-	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55) [akka-actor_2.11-2.3.13.jar:na]
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91) [akka-actor_2.11-2.3.13.jar:na]
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91) [akka-actor_2.11-2.3.13.jar:na]
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91) [akka-actor_2.11-2.3.13.jar:na]
-	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72) [scala-library-2.11.7.jar:na]
-	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90) [akka-actor_2.11-2.3.13.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40) [akka-actor_2.11-2.3.13.jar:na]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:397) [akka-actor_2.11-2.3.13.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.7.jar:na]
-Caused by: play.api.libs.json.JsResultException: JsResultException(errors:List((/imgUrl,List(ValidationError(List(error.path.missing),WrappedArray()))), (/cena,List(ValidationError(List(error.path.missing),WrappedArray()))), (/kategoriaId,List(ValidationError(List(error.path.missing),WrappedArray()))), (/prodId,List(ValidationError(List(error.path.missing),WrappedArray())))))
-	at play.api.libs.json.JsReadable$$anonfun$2.apply(JsReadable.scala:20) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.json.JsReadable$$anonfun$2.apply(JsReadable.scala:20) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.json.JsResult$class.fold(JsResult.scala:73) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.json.JsError.fold(JsResult.scala:13) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.json.JsReadable$class.as(JsReadable.scala:18) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.json.JsObject.as(JsValue.scala:76) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at controllers.ProductController$$anonfun$newproduct$1.apply(ProductController.scala:32) ~[classes/:na]
-	at controllers.ProductController$$anonfun$newproduct$1.apply(ProductController.scala:31) ~[classes/:na]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$16.apply(Action.scala:408) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$16.apply(Action.scala:407) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$.invokeBlock(Action.scala:533) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$.invokeBlock(Action.scala:530) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:493) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:105) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:105) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:104) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:103) ~[play_2.11-2.4.9.jar:2.4.9]
-	at scala.Option.map(Option.scala:146) ~[scala-library-2.11.7.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:103) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:96) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:524) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:524) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:560) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:560) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:537) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:537) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.7.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.7.jar:na]
-	... 6 common frames omitted
-2017-06-12 19:13:52,413 [ERROR] from application in application-akka.actor.default-dispatcher-108 - 
-
-! @74ao0d0fc - Internal server error, for (POST) [/products/new] ->
- 
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[JsResultException: JsResultException(errors:List((/imgUrl,List(ValidationError(List(error.path.missing),WrappedArray()))), (/cena,List(ValidationError(List(error.path.missing),WrappedArray()))), (/kategoriaId,List(ValidationError(List(error.path.missing),WrappedArray()))), (/prodId,List(ValidationError(List(error.path.missing),WrappedArray())))))]]
-	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:265) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:191) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:179) [play_2.11-2.4.9.jar:2.4.9]
-	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:212) [play_2.11-2.4.9.jar:2.4.9]
-	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:94) [play_2.11-2.4.9.jar:2.4.9]
-	at play.filters.cors.AbstractCORSPolicy$$anonfun$1.applyOrElse(AbstractCORSPolicy.scala:145) [filters-helpers_2.11-2.4.9.jar:2.4.9]
-	at play.filters.cors.AbstractCORSPolicy$$anonfun$1.applyOrElse(AbstractCORSPolicy.scala:144) [filters-helpers_2.11-2.4.9.jar:2.4.9]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.7.jar:na]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70) [play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.Promise$class.tryFailure(Promise.scala:112) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryFailure(Promise.scala:153) [scala-library-2.11.7.jar:na]
-	at play.api.mvc.Filter$$anon$1$$anonfun$apply$4$$anonfun$apply$1.applyOrElse(Filters.scala:67) [play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Filter$$anon$1$$anonfun$apply$4$$anonfun$apply$1.applyOrElse(Filters.scala:61) [play_2.11-2.4.9.jar:2.4.9]
-	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36) [scala-library-2.11.7.jar:na]
-	at play.api.libs.iteratee.Iteratee$$anonfun$recoverM$1.applyOrElse(Iteratee.scala:629) [play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$recoverM$1.applyOrElse(Iteratee.scala:629) [play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36) [scala-library-2.11.7.jar:na]
-	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:216) [scala-library-2.11.7.jar:na]
-	at scala.util.Try$.apply(Try.scala:192) [scala-library-2.11.7.jar:na]
-	at scala.util.Failure.recover(Try.scala:216) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.7.jar:na]
-	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55) [akka-actor_2.11-2.3.13.jar:na]
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91) [akka-actor_2.11-2.3.13.jar:na]
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91) [akka-actor_2.11-2.3.13.jar:na]
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91) [akka-actor_2.11-2.3.13.jar:na]
-	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72) [scala-library-2.11.7.jar:na]
-	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90) [akka-actor_2.11-2.3.13.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40) [akka-actor_2.11-2.3.13.jar:na]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:397) [akka-actor_2.11-2.3.13.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.7.jar:na]
-Caused by: play.api.libs.json.JsResultException: JsResultException(errors:List((/imgUrl,List(ValidationError(List(error.path.missing),WrappedArray()))), (/cena,List(ValidationError(List(error.path.missing),WrappedArray()))), (/kategoriaId,List(ValidationError(List(error.path.missing),WrappedArray()))), (/prodId,List(ValidationError(List(error.path.missing),WrappedArray())))))
-	at play.api.libs.json.JsReadable$$anonfun$2.apply(JsReadable.scala:20) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.json.JsReadable$$anonfun$2.apply(JsReadable.scala:20) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.json.JsResult$class.fold(JsResult.scala:73) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.json.JsError.fold(JsResult.scala:13) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.json.JsReadable$class.as(JsReadable.scala:18) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.json.JsObject.as(JsValue.scala:76) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at controllers.ProductController$$anonfun$newproduct$1.apply(ProductController.scala:32) ~[classes/:na]
-	at controllers.ProductController$$anonfun$newproduct$1.apply(ProductController.scala:31) ~[classes/:na]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$16.apply(Action.scala:408) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$16.apply(Action.scala:407) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$.invokeBlock(Action.scala:533) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$.invokeBlock(Action.scala:530) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:493) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:105) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:105) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:104) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:103) ~[play_2.11-2.4.9.jar:2.4.9]
-	at scala.Option.map(Option.scala:146) ~[scala-library-2.11.7.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:103) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:96) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:524) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:524) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:560) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:560) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:537) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:537) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.7.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.7.jar:na]
-	... 6 common frames omitted
-2017-06-13 00:56:15,569 [ERROR] from application in application-akka.actor.default-dispatcher-182 - 
-
-! @74apjblh8 - Internal server error, for (POST) [/products/new] ->
- 
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[JsResultException: JsResultException(errors:List((/kategoriaId,List(ValidationError(List(error.expected.jsnumber),WrappedArray()))), (/prodId,List(ValidationError(List(error.expected.jsnumber),WrappedArray())))))]]
-	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:265) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:191) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:179) [play_2.11-2.4.9.jar:2.4.9]
-	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:212) [play_2.11-2.4.9.jar:2.4.9]
-	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:94) [play_2.11-2.4.9.jar:2.4.9]
-	at play.filters.cors.AbstractCORSPolicy$$anonfun$1.applyOrElse(AbstractCORSPolicy.scala:145) [filters-helpers_2.11-2.4.9.jar:2.4.9]
-	at play.filters.cors.AbstractCORSPolicy$$anonfun$1.applyOrElse(AbstractCORSPolicy.scala:144) [filters-helpers_2.11-2.4.9.jar:2.4.9]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.7.jar:na]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70) [play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.Promise$class.tryFailure(Promise.scala:112) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryFailure(Promise.scala:153) [scala-library-2.11.7.jar:na]
-	at play.api.mvc.Filter$$anon$1$$anonfun$apply$4$$anonfun$apply$1.applyOrElse(Filters.scala:67) [play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Filter$$anon$1$$anonfun$apply$4$$anonfun$apply$1.applyOrElse(Filters.scala:61) [play_2.11-2.4.9.jar:2.4.9]
-	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36) [scala-library-2.11.7.jar:na]
-	at play.api.libs.iteratee.Iteratee$$anonfun$recoverM$1.applyOrElse(Iteratee.scala:629) [play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$recoverM$1.applyOrElse(Iteratee.scala:629) [play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36) [scala-library-2.11.7.jar:na]
-	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:216) [scala-library-2.11.7.jar:na]
-	at scala.util.Try$.apply(Try.scala:192) [scala-library-2.11.7.jar:na]
-	at scala.util.Failure.recover(Try.scala:216) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.7.jar:na]
-	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55) [akka-actor_2.11-2.3.13.jar:na]
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91) [akka-actor_2.11-2.3.13.jar:na]
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91) [akka-actor_2.11-2.3.13.jar:na]
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91) [akka-actor_2.11-2.3.13.jar:na]
-	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72) [scala-library-2.11.7.jar:na]
-	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90) [akka-actor_2.11-2.3.13.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40) [akka-actor_2.11-2.3.13.jar:na]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:397) [akka-actor_2.11-2.3.13.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.7.jar:na]
-Caused by: play.api.libs.json.JsResultException: JsResultException(errors:List((/kategoriaId,List(ValidationError(List(error.expected.jsnumber),WrappedArray()))), (/prodId,List(ValidationError(List(error.expected.jsnumber),WrappedArray())))))
-	at play.api.libs.json.JsReadable$$anonfun$2.apply(JsReadable.scala:20) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.json.JsReadable$$anonfun$2.apply(JsReadable.scala:20) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.json.JsResult$class.fold(JsResult.scala:73) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.json.JsError.fold(JsResult.scala:13) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.json.JsReadable$class.as(JsReadable.scala:18) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.json.JsObject.as(JsValue.scala:76) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at controllers.ProductController$$anonfun$newproduct$1.apply(ProductController.scala:32) ~[classes/:na]
-	at controllers.ProductController$$anonfun$newproduct$1.apply(ProductController.scala:31) ~[classes/:na]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$16.apply(Action.scala:408) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$16.apply(Action.scala:407) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$.invokeBlock(Action.scala:533) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$.invokeBlock(Action.scala:530) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:493) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:105) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:105) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:104) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:103) ~[play_2.11-2.4.9.jar:2.4.9]
-	at scala.Option.map(Option.scala:146) ~[scala-library-2.11.7.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:103) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:96) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:524) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:524) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:560) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:560) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:537) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:537) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.7.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.7.jar:na]
-	... 6 common frames omitted
-2017-06-13 00:56:44,020 [ERROR] from application in application-akka.actor.default-dispatcher-188 - 
-
-! @74apjdbop - Internal server error, for (POST) [/products/new] ->
- 
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[JsResultException: JsResultException(errors:List((/kategoriaId,List(ValidationError(List(error.expected.jsnumber),WrappedArray()))), (/prodId,List(ValidationError(List(error.expected.jsnumber),WrappedArray())))))]]
-	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:265) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:191) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:179) [play_2.11-2.4.9.jar:2.4.9]
-	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:212) [play_2.11-2.4.9.jar:2.4.9]
-	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:94) [play_2.11-2.4.9.jar:2.4.9]
-	at play.filters.cors.AbstractCORSPolicy$$anonfun$1.applyOrElse(AbstractCORSPolicy.scala:145) [filters-helpers_2.11-2.4.9.jar:2.4.9]
-	at play.filters.cors.AbstractCORSPolicy$$anonfun$1.applyOrElse(AbstractCORSPolicy.scala:144) [filters-helpers_2.11-2.4.9.jar:2.4.9]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.7.jar:na]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70) [play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.Promise$class.tryFailure(Promise.scala:112) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryFailure(Promise.scala:153) [scala-library-2.11.7.jar:na]
-	at play.api.mvc.Filter$$anon$1$$anonfun$apply$4$$anonfun$apply$1.applyOrElse(Filters.scala:67) [play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Filter$$anon$1$$anonfun$apply$4$$anonfun$apply$1.applyOrElse(Filters.scala:61) [play_2.11-2.4.9.jar:2.4.9]
-	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36) [scala-library-2.11.7.jar:na]
-	at play.api.libs.iteratee.Iteratee$$anonfun$recoverM$1.applyOrElse(Iteratee.scala:629) [play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$recoverM$1.applyOrElse(Iteratee.scala:629) [play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36) [scala-library-2.11.7.jar:na]
-	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:216) [scala-library-2.11.7.jar:na]
-	at scala.util.Try$.apply(Try.scala:192) [scala-library-2.11.7.jar:na]
-	at scala.util.Failure.recover(Try.scala:216) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.7.jar:na]
-	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55) [akka-actor_2.11-2.3.13.jar:na]
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91) [akka-actor_2.11-2.3.13.jar:na]
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91) [akka-actor_2.11-2.3.13.jar:na]
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91) [akka-actor_2.11-2.3.13.jar:na]
-	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72) [scala-library-2.11.7.jar:na]
-	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90) [akka-actor_2.11-2.3.13.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40) [akka-actor_2.11-2.3.13.jar:na]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:397) [akka-actor_2.11-2.3.13.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.7.jar:na]
-Caused by: play.api.libs.json.JsResultException: JsResultException(errors:List((/kategoriaId,List(ValidationError(List(error.expected.jsnumber),WrappedArray()))), (/prodId,List(ValidationError(List(error.expected.jsnumber),WrappedArray())))))
-	at play.api.libs.json.JsReadable$$anonfun$2.apply(JsReadable.scala:20) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.json.JsReadable$$anonfun$2.apply(JsReadable.scala:20) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.json.JsResult$class.fold(JsResult.scala:73) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.json.JsError.fold(JsResult.scala:13) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.json.JsReadable$class.as(JsReadable.scala:18) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.json.JsObject.as(JsValue.scala:76) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at controllers.ProductController$$anonfun$newproduct$1.apply(ProductController.scala:32) ~[classes/:na]
-	at controllers.ProductController$$anonfun$newproduct$1.apply(ProductController.scala:31) ~[classes/:na]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$16.apply(Action.scala:408) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$16.apply(Action.scala:407) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$.invokeBlock(Action.scala:533) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$.invokeBlock(Action.scala:530) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:493) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:105) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:105) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:104) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:103) ~[play_2.11-2.4.9.jar:2.4.9]
-	at scala.Option.map(Option.scala:146) ~[scala-library-2.11.7.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:103) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:96) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:524) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:524) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:560) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:560) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:537) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:537) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.7.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.7.jar:na]
-	... 6 common frames omitted
-2017-06-13 01:08:22,010 [ERROR] from application in application-akka.actor.default-dispatcher-195 - 
-
-! @74apl14c5 - Internal server error, for (POST) [/products/new] ->
- 
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[JsResultException: JsResultException(errors:List((/prodId,List(ValidationError(List(error.expected.jsnumber),WrappedArray())))))]]
-	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:265) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:191) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:179) [play_2.11-2.4.9.jar:2.4.9]
-	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:212) [play_2.11-2.4.9.jar:2.4.9]
-	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:94) [play_2.11-2.4.9.jar:2.4.9]
-	at play.filters.cors.AbstractCORSPolicy$$anonfun$1.applyOrElse(AbstractCORSPolicy.scala:145) [filters-helpers_2.11-2.4.9.jar:2.4.9]
-	at play.filters.cors.AbstractCORSPolicy$$anonfun$1.applyOrElse(AbstractCORSPolicy.scala:144) [filters-helpers_2.11-2.4.9.jar:2.4.9]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.7.jar:na]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70) [play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.Promise$class.tryFailure(Promise.scala:112) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryFailure(Promise.scala:153) [scala-library-2.11.7.jar:na]
-	at play.api.mvc.Filter$$anon$1$$anonfun$apply$4$$anonfun$apply$1.applyOrElse(Filters.scala:67) [play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Filter$$anon$1$$anonfun$apply$4$$anonfun$apply$1.applyOrElse(Filters.scala:61) [play_2.11-2.4.9.jar:2.4.9]
-	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36) [scala-library-2.11.7.jar:na]
-	at play.api.libs.iteratee.Iteratee$$anonfun$recoverM$1.applyOrElse(Iteratee.scala:629) [play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$recoverM$1.applyOrElse(Iteratee.scala:629) [play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36) [scala-library-2.11.7.jar:na]
-	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:216) [scala-library-2.11.7.jar:na]
-	at scala.util.Try$.apply(Try.scala:192) [scala-library-2.11.7.jar:na]
-	at scala.util.Failure.recover(Try.scala:216) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.7.jar:na]
-	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55) [akka-actor_2.11-2.3.13.jar:na]
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91) [akka-actor_2.11-2.3.13.jar:na]
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91) [akka-actor_2.11-2.3.13.jar:na]
-	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91) [akka-actor_2.11-2.3.13.jar:na]
-	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72) [scala-library-2.11.7.jar:na]
-	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90) [akka-actor_2.11-2.3.13.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40) [akka-actor_2.11-2.3.13.jar:na]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:397) [akka-actor_2.11-2.3.13.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.7.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.7.jar:na]
-Caused by: play.api.libs.json.JsResultException: JsResultException(errors:List((/prodId,List(ValidationError(List(error.expected.jsnumber),WrappedArray())))))
-	at play.api.libs.json.JsReadable$$anonfun$2.apply(JsReadable.scala:20) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.json.JsReadable$$anonfun$2.apply(JsReadable.scala:20) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.json.JsResult$class.fold(JsResult.scala:73) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.json.JsError.fold(JsResult.scala:13) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.json.JsReadable$class.as(JsReadable.scala:18) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.json.JsObject.as(JsValue.scala:76) ~[play-json_2.11-2.4.9.jar:2.4.9]
-	at controllers.ProductController$$anonfun$newproduct$1.apply(ProductController.scala:32) ~[classes/:na]
-	at controllers.ProductController$$anonfun$newproduct$1.apply(ProductController.scala:31) ~[classes/:na]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$16.apply(Action.scala:408) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$16.apply(Action.scala:407) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$.invokeBlock(Action.scala:533) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$.invokeBlock(Action.scala:530) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:493) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:105) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:105) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:104) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:103) ~[play_2.11-2.4.9.jar:2.4.9]
-	at scala.Option.map(Option.scala:146) ~[scala-library-2.11.7.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:103) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:96) ~[play_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:524) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:524) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:560) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:560) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:537) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:537) ~[play-iteratees_2.11-2.4.9.jar:2.4.9]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.7.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.7.jar:na]
-	... 6 common frames omitted
+2017-06-18 22:35:35,249 [INFO] from play.core.server.NettyServer in pool-4-thread-2 - Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+2017-06-18 22:35:38,429 [WARN] from application in ForkJoinPool-1-worker-1 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
+2017-06-18 22:35:42,848 [WARN] from application in ForkJoinPool-1-worker-1 - application.conf @ file:/home/osboxes/IdeaProjects/Play2/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
+2017-06-18 22:35:43,098 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
+2017-06-18 22:35:49,169 [WARN] from application in netty-event-loop-3 - application.langs is deprecated, use play.i18n.langs instead
+2017-06-18 22:36:14,404 [WARN] from application in application-akka.actor.default-dispatcher-4 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
+2017-06-18 22:36:15,690 [WARN] from application in application-akka.actor.default-dispatcher-4 - application.conf @ file:/home/osboxes/IdeaProjects/Play2/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
+2017-06-18 22:36:16,100 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-4 - Application started (Dev)
+2017-06-18 22:36:16,258 [WARN] from application in netty-event-loop-3 - application.langs is deprecated, use play.i18n.langs instead
+2017-06-18 22:45:43,326 [ERROR] from controllers.SocialAuthController in application-akka.actor.default-dispatcher-3 - Unexpected provider error
+com.mohiva.play.silhouette.impl.exceptions.ProfileRetrievalException: [Silhouette][google] Error retrieving profile information. Error code: 403, message: Project 601579987993 is not found and cannot be used for API calls. If it is recently created, enable Google+ API by visiting https://console.developers.google.com/apis/api/plus.googleapis.com/overview?project=601579987993 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+	at com.mohiva.play.silhouette.impl.providers.oauth2.BaseGoogleProvider$$anonfun$buildProfile$1.apply(GoogleProvider.scala:70)
+	at com.mohiva.play.silhouette.impl.providers.oauth2.BaseGoogleProvider$$anonfun$buildProfile$1.apply(GoogleProvider.scala:63)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:253)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:405)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+2017-06-18 22:53:00,797 [ERROR] from controllers.SocialAuthController in application-akka.actor.default-dispatcher-3 - Unexpected provider error
+com.mohiva.play.silhouette.impl.exceptions.UnexpectedResponseException: [Silhouette][google] Cannot build OAuth2Info because of invalid response format: List((/access_token,List(ValidationError(List(error.path.missing),WrappedArray()))))
+	at com.mohiva.play.silhouette.impl.providers.OAuth2Provider$$anonfun$buildInfo$1.apply(OAuth2Provider.scala:164)
+	at com.mohiva.play.silhouette.impl.providers.OAuth2Provider$$anonfun$buildInfo$1.apply(OAuth2Provider.scala:164)
+	at scala.util.Either.fold(Either.scala:98)
+	at com.mohiva.play.silhouette.impl.providers.OAuth2Provider$class.buildInfo(OAuth2Provider.scala:163)
+	at com.mohiva.play.silhouette.impl.providers.oauth2.GoogleProvider.buildInfo(GoogleProvider.scala:121)
+	at com.mohiva.play.silhouette.impl.providers.OAuth2Provider$$anonfun$getAccessToken$2.apply(OAuth2Provider.scala:152)
+	at com.mohiva.play.silhouette.impl.providers.OAuth2Provider$$anonfun$getAccessToken$2.apply(OAuth2Provider.scala:150)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:253)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:405)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+2017-06-18 22:56:17,440 [WARN] from application in application-akka.actor.default-dispatcher-3 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
+2017-06-18 22:56:18,138 [WARN] from application in application-akka.actor.default-dispatcher-3 - application.conf @ file:/home/osboxes/IdeaProjects/Play2/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
+2017-06-18 22:56:18,252 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-3 - Application started (Dev)
+2017-06-18 22:56:18,280 [WARN] from application in netty-event-loop-8 - application.langs is deprecated, use play.i18n.langs instead
+2017-06-18 23:00:09,177 [WARN] from application in application-akka.actor.default-dispatcher-5 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
+2017-06-18 23:00:09,905 [WARN] from application in application-akka.actor.default-dispatcher-5 - application.conf @ file:/home/osboxes/IdeaProjects/Play2/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
+2017-06-18 23:00:10,087 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-5 - Application started (Dev)
+2017-06-18 23:00:10,109 [WARN] from application in netty-event-loop-1 - application.langs is deprecated, use play.i18n.langs instead
+2017-06-18 23:15:58,834 [WARN] from application in application-akka.actor.default-dispatcher-5 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
+2017-06-18 23:15:59,451 [WARN] from application in application-akka.actor.default-dispatcher-5 - application.conf @ file:/home/osboxes/IdeaProjects/Play2/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
+2017-06-18 23:15:59,559 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-5 - Application started (Dev)
+2017-06-18 23:15:59,613 [WARN] from application in netty-event-loop-2 - application.langs is deprecated, use play.i18n.langs instead
+2017-06-18 23:33:52,729 [WARN] from application in application-akka.actor.default-dispatcher-7 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
+2017-06-18 23:33:53,146 [WARN] from application in application-akka.actor.default-dispatcher-7 - application.conf @ file:/home/osboxes/IdeaProjects/Play2/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
+2017-06-18 23:33:53,225 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-7 - Application started (Dev)
+2017-06-18 23:33:53,245 [WARN] from application in netty-event-loop-5 - application.langs is deprecated, use play.i18n.langs instead
+2017-06-19 00:05:11,686 [WARN] from application in application-akka.actor.default-dispatcher-3 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
+2017-06-19 00:05:12,388 [WARN] from application in application-akka.actor.default-dispatcher-3 - application.conf @ file:/home/osboxes/IdeaProjects/Play2/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
+2017-06-19 00:05:12,606 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-3 - Application started (Dev)
+2017-06-19 00:05:12,652 [WARN] from application in netty-event-loop-6 - application.langs is deprecated, use play.i18n.langs instead
+2017-06-19 00:27:32,413 [ERROR] from controllers.SocialAuthController in application-akka.actor.default-dispatcher-26 - Unexpected provider error
+com.mohiva.play.silhouette.api.exceptions.ProviderException: Cannot authenticate with unexpected social provider googleiii
+	at controllers.SocialAuthController$$anonfun$authenticate$1$$anonfun$apply$2.apply(SocialAuthController.scala:62)
+	at controllers.SocialAuthController$$anonfun$authenticate$1$$anonfun$apply$2.apply(SocialAuthController.scala:46)
+	at controllers.SocialAuthController.controllers$SocialAuthController$$cacheAuthTokenForOauth1(SocialAuthController.scala:91)
+	at controllers.SocialAuthController$$anonfun$authenticate$1.apply(SocialAuthController.scala:46)
+	at controllers.SocialAuthController$$anonfun$authenticate$1.apply(SocialAuthController.scala:45)
+	at play.api.mvc.Action$.invokeBlock(Action.scala:498)
+	at play.api.mvc.Action$.invokeBlock(Action.scala:495)
+	at play.api.mvc.ActionBuilder$$anon$2.apply(Action.scala:458)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:111)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:110)
+	at scala.Option.map(Option.scala:146)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:110)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:103)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:253)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:405)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+2017-06-19 00:32:20,567 [WARN] from application in application-akka.actor.default-dispatcher-21 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
+2017-06-19 00:32:20,903 [WARN] from application in application-akka.actor.default-dispatcher-21 - application.conf @ file:/home/osboxes/IdeaProjects/Play2/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
+2017-06-19 00:32:20,944 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-21 - Application started (Dev)
+2017-06-19 00:32:20,971 [WARN] from application in netty-event-loop-4 - application.langs is deprecated, use play.i18n.langs instead
+2017-06-19 00:36:45,613 [WARN] from application in application-akka.actor.default-dispatcher-2 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
+2017-06-19 00:36:46,124 [WARN] from application in application-akka.actor.default-dispatcher-2 - application.conf @ file:/home/osboxes/IdeaProjects/Play2/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
+2017-06-19 00:36:46,373 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-2 - Application started (Dev)
+2017-06-19 00:36:46,441 [WARN] from application in netty-event-loop-5 - application.langs is deprecated, use play.i18n.langs instead
+2017-06-19 08:55:26,920 [WARN] from application in application-akka.actor.default-dispatcher-11 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
+2017-06-19 08:55:27,821 [WARN] from application in application-akka.actor.default-dispatcher-11 - application.conf @ file:/home/osboxes/IdeaProjects/Play2/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
+2017-06-19 08:55:27,951 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-11 - Application started (Dev)
+2017-06-19 08:55:27,999 [WARN] from application in netty-event-loop-3 - application.langs is deprecated, use play.i18n.langs instead
+2017-06-19 08:55:28,858 [ERROR] from controllers.SocialAuthController in application-akka.actor.default-dispatcher-8 - Unexpected provider error
+com.mohiva.play.silhouette.impl.exceptions.UnexpectedResponseException: [Silhouette][google] Cannot build OAuth2Info because of invalid response format: List((/access_token,List(ValidationError(List(error.path.missing),WrappedArray()))))
+	at com.mohiva.play.silhouette.impl.providers.OAuth2Provider$$anonfun$buildInfo$1.apply(OAuth2Provider.scala:164)
+	at com.mohiva.play.silhouette.impl.providers.OAuth2Provider$$anonfun$buildInfo$1.apply(OAuth2Provider.scala:164)
+	at scala.util.Either.fold(Either.scala:98)
+	at com.mohiva.play.silhouette.impl.providers.OAuth2Provider$class.buildInfo(OAuth2Provider.scala:163)
+	at com.mohiva.play.silhouette.impl.providers.oauth2.GoogleProvider.buildInfo(GoogleProvider.scala:121)
+	at com.mohiva.play.silhouette.impl.providers.OAuth2Provider$$anonfun$getAccessToken$2.apply(OAuth2Provider.scala:152)
+	at com.mohiva.play.silhouette.impl.providers.OAuth2Provider$$anonfun$getAccessToken$2.apply(OAuth2Provider.scala:150)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:253)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:405)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+2017-06-19 08:56:17,378 [WARN] from application in application-akka.actor.default-dispatcher-4 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
+2017-06-19 08:56:18,061 [WARN] from application in application-akka.actor.default-dispatcher-4 - application.conf @ file:/home/osboxes/IdeaProjects/Play2/target/scala-2.11/classes/application.conf: 8: application.secret is deprecated, use play.crypto.secret instead
+2017-06-19 08:56:18,185 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-4 - Application started (Dev)
+2017-06-19 08:56:18,211 [WARN] from application in netty-event-loop-3 - application.langs is deprecated, use play.i18n.langs instead

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="SBT: com.iheart:ficus_2.11:1.2.6:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.iheart/ficus_2.11/jars/ficus_2.11-1.2.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

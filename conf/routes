@@ -15,6 +15,14 @@ POST    /products/:prodId           @controllers.ProductController.updateproduct
 # DELETE
 DELETE  /products/:prodId           @controllers.ProductController.deleteproduct(prodId : Long)
 
+# OAuth2
+GET     /user                       @controllers.ApplicationController.user
+GET     /signOut                    @controllers.ApplicationController.signOut
+POST    /signIn                     @controllers.SignInController.submit
+POST    /signUp                     @controllers.SignUpController.submit
+GET     /authenticate/:provider     @controllers.SocialAuthController.authenticate(provider)
+POST    /authenticate/:provider     @controllers.SocialAuthController.authenticate(provider)
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
