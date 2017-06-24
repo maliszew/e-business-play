@@ -56,7 +56,7 @@ class SocialAuthController @Inject() (
               token <- silhouette.env.authenticatorService.init(authenticator)
             } yield {
               silhouette.env.eventBus.publish(LoginEvent(user, request))
-              Ok(Json.obj("tokenxD" -> token,
+              Ok(Json.obj("token" -> token,
                           "user" -> user,
                           "name" -> profile.fullName,
                           "email" -> profile.email,

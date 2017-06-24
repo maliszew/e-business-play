@@ -30,6 +30,7 @@ import play.api.Configuration
 import play.api.libs.concurrent.Execution.Implicits._
 import play.api.libs.ws.WSClient
 import utils.auth.DefaultEnv
+import play.api.libs.json.Json
 
 /**
  * The Guice module which wires all Silhouette dependencies.
