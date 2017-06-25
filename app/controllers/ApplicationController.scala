@@ -2,11 +2,12 @@ package controllers
 
 import javax.inject.Inject
 
-import com.mohiva.play.silhouette.api.{ LogoutEvent, Silhouette }
+import com.mohiva.play.silhouette.api.{ HandlerResult, LogoutEvent, Silhouette }
 import com.mohiva.play.silhouette.impl.providers.SocialProviderRegistry
 import play.api.i18n.{ I18nSupport, MessagesApi }
-import play.api.libs.json.Json
-import play.api.mvc.Controller
+import play.api.libs.json.{ JsValue, Json }
+import play.api.mvc._
+import play.api.libs.concurrent.Execution.Implicits.defaultContext
 import utils.auth.DefaultEnv
 
 import scala.concurrent.Future
@@ -42,6 +43,18 @@ class ApplicationController @Inject() (
   }
 
   /**
+    * An example for a user-aware request handler.
+    */
+  def oauthSignIn = Action.async { implicit request =>
+    silhouette.UserAwareRequestHandler { userAwareRequest =>
+      Future.successful(HandlerResult(Ok, userAwareRequest.identity))
+    }.map {
+      case HandlerResult(r, Some(user)) => Ok(Json.toJson(user))
+      case HandlerResult(r, None) => Unauthorized
+    }
+  }
+
+  /**
    * Provides the desired template.
    *
    * @param template The template to provide.
@@ -55,5 +68,9 @@ class ApplicationController @Inject() (
       case "navigation" => Ok(views.html.navigation())
       case _ => NotFound
     }
+  }
+
+  def echo = Action { request =>
+    Ok("Got request [" + request + "]")
   }
 }

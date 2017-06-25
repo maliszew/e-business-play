@@ -16,10 +16,15 @@ POST    /products/:prodId           @controllers.ProductController.updateproduct
 DELETE  /products/:prodId           @controllers.ProductController.deleteproduct(prodId : Long)
 
 # OAuth2
+GET     /oauthSignIn                @controllers.ApplicationController.oauthSignIn
+OPTIONS     /oauthSignIn                @controllers.ApplicationController.echo
 GET     /user                       @controllers.ApplicationController.user
+OPTIONS        /user                @controllers.ApplicationController.echo
 GET     /signOut                    @controllers.ApplicationController.signOut
 POST    /signIn                     @controllers.SignInController.submit
 POST    /signUp                     @controllers.SignUpController.submit
+OPTIONS        /signUp              @controllers.ApplicationController.echo
+OPTIONS        /signIn              @controllers.ApplicationController.echo
 GET     /authenticate/:provider     @controllers.SocialAuthController.authenticate(provider)
 POST    /authenticate/:provider     @controllers.SocialAuthController.authenticate(provider)
 

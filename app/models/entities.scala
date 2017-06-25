@@ -16,4 +16,5 @@ case class Products(prodId: Long, tytul: String, opis: String, imgUrl: String, c
 
 //case class Purchases(purId: Long, prodId: Long, userId: Long)
 
-//case class Users(userId: Long, username: String)
+case class UserEntity(id: Long, userID: String, providerID: String, providerKey: String, firstName: Option[String],
+                      lastName: Option[String], fullName: Option[String], email: Option[String], avatarURL: Option[String])
